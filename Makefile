@@ -12,7 +12,6 @@ ifeq ($(TARGETARCH), aarch64)
 	TARGETARCH := arm64
 endif
 
-# Основні цілі
 all: linux macos windows arm
 
 linux:
