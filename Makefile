@@ -1,6 +1,7 @@
 # Version and registry settings
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 REGISTRY := digi64
+APP := kbot
 TARGETOS := linux
 TARGETARCH := $(shell uname -m)
 
@@ -56,3 +57,4 @@ clean:
 	rm -rf kbot
 	docker rmi ${REGISTRY}/${APP}${VERSION}-${TARGETARCH}
 	rm -f ${APP}_linux_amd64 ${APP}_macos_amd64 ${APP}_windows_amd64.exe ${APP}_linux_arm64
+	docker rmi ${IMAGE_TAG} || true
