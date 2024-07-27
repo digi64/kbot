@@ -54,5 +54,5 @@ push:
 
 clean:
 	rm -rf kbot
-	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker rmi ${REGISTRY}/${APP}${VERSION}-${TARGETARCH}
 	rm -f ${APP}_linux_amd64 ${APP}_macos_amd64 ${APP}_windows_amd64.exe ${APP}_linux_arm64
